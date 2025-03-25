@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Puppeteer</title>
+    <style>
+    /* FadeOut Animation */
+    @keyframes fadeOut {
+        0% { opacity: 1; }
+        100% { opacity: 0; }
+    }
+    .fadeOut {
+        animation: fadeOut 2s ease forwards;
+    }
+
+    /* Slide Animation */
+    @keyframes slideIn {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-100vh); }
+    }
+    .slide {
+        animation: slideIn 2s ease forwards;
+    }
+
+    /* Grow Animation */
+    @keyframes grow {
+        0% { transform: scale(1); }
+        100% { transform: scale(1.5); }
+    }
+    .grow {
+        animation: grow 2s ease forwards;
+    }
+
+    /* Bounce Animation */
+    @keyframes bounceIn {
+        0%, 20%, 50%, 80%, 100% {
+            transform: translateY(0);
+            opacity: 1;
+        }
+        40% {
+            transform: translateY(-30px);
+        }
+        60% {
+            transform: translateY(-15px);
+        }
+    }
+    .bounce {
+        animation: bounceIn 2s infinite 2s;
+    }
+    @keyframes bounceOut {
+        0%, 20%, 50%, 80%, 100% {
+            transform: translateY(0);
+            opacity: 1;
+        }
+        40% {
+            transform: translateY(30px);
+        }
+        60% {
+            transform: translateY(15px);
+        }
+    }
+    .bounceDown {
+        animation: bounceOut 2s infinite 2s;
+    }
+    </style>
+
+</head>
+
+<body>
+    <div id="navbar">
+        <h1>😃</h1><h1>😃</h1><h1>😃</h1><h1>😃</h1>
+        <h1 id="title">
+            The Puppet Master
+        </h1>
+        <h1>😎</h1><h1>😎</h1><h1>😎</h1><h1>😎</h1>
+    </div>
+    <div id="content">
+        <img id="puppeteer" src="puppeteer.png" />
+        <div id="assignmentBlocks">
+            <div class="assignmentBlock">
+                <h1>Fade-out</h1>
+                <h1 id="ninjaEmoji">🐱‍👤</h1>
+                <button
+                    onclick='const ninjaEmojiHTML = document.getElementById("ninjaEmoji");
+                    ninjaEmojiHTML.className = "fadeOut";'>Click me</button>
+            </div>
+            <div class="assignmentBlock">
+                <h1>Slide</h1>
+                <h1 id="yogaEmoji">🧘🏾‍♀️</h1>
+                <button 
+                    onclick='const yogaEmojiHTML = document.getElementById("yogaEmoji");
+                    yogaEmojiHTML.className = "slide";'>Click me</button>
+            </div>
+            <div class="assignmentBlock">
+                <h1>Grow</h1>
+                <h1 id="smileyEmoji">😀</h1>
+                <button
+                    onclick='const smileyEmojiHTML = document.getElementById("smileyEmoji");
+                    smileyEmojiHTML.className = "grow";'>Click me</button>
+            </div>
+
+
+
+
+            <h3>The following exercises will be more intricate.</h3>
+            <div class="assignmentBlock">
+                <h1>Focused Growth</h1>
+                <h1 class="grow" id="shadeEmoji">😎</h1>
+                <input placeholder="Click Here" type="text" onfocus='
+                //*** YOUR JAVASCRIPT CODE HERE ***
+                //Assign the grow class to the HTML element with the smiley emoji
+
+
+                '/>
+                <input placeholder="No! Click Over Here!" type="text" onblur=""/>
+            </div>
+            <div class="assignmentBlock">
+                <h1>BALANCE</h1>
+                <h1 id="" onmouseenter='
+                //*** YOUR JAVASCRIPT CODE HERE ***
+                //Assign the grow class to this HTML element
+                //Remove the grow class from the HTML element with the Blue Heart Emoji
+
+                '>❤️</h1>
+                <h1 id="" onmouseleave='
+                //*** YOUR JAVASCRIPT CODE HERE ***
+                //Assign the grow class to this HTML element
+                //Remove the grow class from the HTML element with the Red Heart Emoji
+
+                '>💙</h1>
+            </div>
+
+            <div class="assignmentBlock">
+                <h1>Keys Down</h1>
+                <h1 id="" class="">🔒</h1>
+                <input type="text" onkeydown='
+                //*** YOUR JAVASCRIPT CODE HERE ***
+                //Assign the bounceDown class to the HTML element with the Locked Emoji
+
+                '/>
+            </div>
+            <div class="assignmentBlock">
+                <h1>Keys Up</h1>
+                <h1 id="" class="">🔐</h1>
+                <input type="text" onkeyup='
+                //*** YOUR JAVASCRIPT CODE HERE ***
+                //Assign the bounce class to the HTML element with the Locked with Key Emoji
+
+                '/>
+            </div>
+            <div class="assignmentBlock">
+                <h1>Ninja Strikes Back!</h1>
+                <h1 id="ninjaEmoji2">🥷🏼</h1>
+                <button
+                    onclick='
+                    //*** YOUR JAVASCRIPT CODE HERE ***
+                    //Assign the fadeOut class to the HTML element with the ninja emoji
+
+                    '>Attack</button>
+                    <button
+                    onclick='
+                    //*** YOUR JAVASCRIPT CODE HERE ***
+                    //Remove the fadeOut class to the HTML element with the ninja emoji
+
+                    '>Dodge</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+
+
+
+<!-- ======================== DO NOT MODIFY ======================== -->
+<style>
+    #navbar {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #title {
+        display: inline-block;
+    }
+
+    #puppeteer {
+        width: 25%;
+    }
+
+    #content {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+    }
+
+    #assignmentBlocks{
+        /* border: 3px solid purple; */
+        margin-top: 5%;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .assignmentBlock {
+        /* border: 3px solid yellow; */
+        flex: 1;
+        text-align: center;
+        margin-bottom: 3%;
+    }
+
+    #ninjaEmoji {
+        margin-top: 0%;
+        margin-bottom: 1%;
+        font-size: 8vh;
+        display: inline-block;
+    }
+    #yogaEmoji {
+        margin-top: 0%;
+        margin-bottom: 1%;
+        font-size: 8vh;
+        display: inline-block;
+    }
+    #smileyEmoji {
+        margin-top: 0%;
+        margin-bottom: 1%;
+        font-size: 8vh;
+        display: inline-block;
+    }
+</style>
+<!-- ======================== DO NOT MODIFY ======================== -->
+
+</html>

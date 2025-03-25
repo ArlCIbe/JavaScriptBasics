@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+</head>
+
+<body>
+    <div id="shirtsSection">
+        <h1 id="shirtsHeader">Shirts</h1>
+        <div id="shirtsItems">
+            <div id="itemShirt1">
+                <img id="imgShirt1" width="175" height="175" src="./assets/shirt/shirt.jpg" />
+                <h3 id="titleShirt1">Green Flanel Shirt</h3>
+            </div>
+            <div id="itemShirt2">
+                <img id="imgShirt2" width="175" height="175" src="./assets/shirt/shirt2.jpg" />
+                <h3 id="titleShirt2">Blue Althetic Polo</h3>
+            </div>
+            <div id="itemShirt3">
+                <img id="imgShirt3" width="175" height="175" src="./assets/shirt/shirt3.jpg" />
+                <h3 id="titleShirt3">Black Long-sleeve Polo</h3>
+            </div>
+        </div>
+    </div>
+
+    <div id="pantsSection">
+        <h1 id="pantsHeader">Pants</h1>
+        <div id="pantsItems">
+            <div id="itemPants1">
+                <img id="imgPants1" width="175" height="175" src="./assets/pants/Pants.jpg" />
+                <h3 id="titlePants1">Grey Pants</h3>
+            </div>
+            <div id="itemPants2">
+                <img id="imgPants2" width="175" height="175" src="./assets/pants/Pants2.jpg" />
+                <h3 id="titlePants2">Black Pants</h3>
+            </div>
+            <div id="itemPants3">
+                <img id="imgPants3" width="175" height="175" src="./assets/pants/Pants3.jpg" />
+                <h3 id="titlePants3">Green Pants</h3>
+            </div>
+        </div>
+    </div>
+
+    <div id="shoesSection">
+        <h1 id="shoesHeader">Shoes</h1>
+        <div id="shoesItems">
+            <div id="itemShoes1">
+                <img id="imgShoes1" width="175" height="175" src="./assets/shoes/AdidasShoe.jpg" />
+                <h3 id="titleShoes1">Adidas Shoes</h3>
+            </div>
+            <div id="itemShoes2">
+                <img id="imgShoes2" width="175" height="175" src="./assets/shoes/NewBalanceShoe.jpg" />
+                <h3 id="titleShoes2">New Balance Shoes</h3>
+            </div>
+            <div id="itemShoes3">
+                <img id="imgShoes3" width="175" height="175" src="./assets/shoes/NikeShoe.jpg" />
+                <h3 id="titleShoes3">Nike Shoes</h3>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script>
+    // <============================= YOUR CODE HERE =============================>
+
+    // <---------------- PART 1 ------------>
+    // Align the clothing items horizontally
+
+    var shirt1 = document.getElementById("itemShirt1");
+    shirt1.style.display = "inline-block";
+
+    var shirt2 = document.getElementById("itemShirt2");
+    shirt2.style.display = "inline-block";
+
+    var shirt3 = document.getElementById("itemShirt3");
+    shirt3.style.display = "inline-block";
+
+    //finish the rest of PART 1 here..
+
+    var pants1 = document.getElementById("itemPants1");
+    pants1.style.display = "inline-block";
+
+    var pants2 = document.getElementById("itemPants2");
+    pants2.style.display = "inline-block";
+
+    var pants3 = document.getElementById("itemPants3");
+    pants3.style.display = "inline-block";
+
+    var shoes1 = document.getElementById("itemShoes1");
+    shoes1.style.display = "inline-block";
+
+    var shoes2 = document.getElementById("itemShoes2");
+    shoes2.style.display = "inline-block";
+
+    var shoes3 = document.getElementById("itemShoes3");
+    shoes3.style.display = "inline-block";
+
+    // <---------------- PART 2 ------------>
+    // Space-out and center the clothing items
+
+    var shirts = document.getElementById("shirtsItems");
+    shirts.style.display = "flex";
+    shirts.style.justifyContent = "center"
+
+    shirt1.style.margin = "0% 3% 0%";
+    shirt2.style.margin = "0% 3% 0%";
+    shirt3.style.margin = "0% 3% 0%";
+
+    var pants = document.getElementById("pantsItems")
+    pants.style.display = "flex";
+    pants.style.justifyContent = "center"
+
+    pants1.style.margin = "0% 3% 0%";
+    pants2.style.margin = "0% 3% 0%";
+    pants3.style.margin = "0% 3% 0%";
+
+    var shoes = document.getElementById("shoesItems")
+    shoes.style.display = "flex"
+    shoes.style.justifyContent = "center"
+
+    shoes1.style.margin = "0% 3% 0%";
+    shoes2.style.margin = "0% 3% 0%";
+    shoes3.style.margin = "0% 3% 0%";
+
+    // <---------------- PART 3 ------------>
+    // Center the item descriptions and category headers
+
+    var headings = document.getElementsByTagName("h1")
+    Array.from(headings).forEach(function(heading){
+        heading.style.textAlign = "center"
+    })
+
+    var headings = document.getElementsByTagName("h3")
+    Array.from(headings).forEach(function(heading){
+        heading.style.textAlign = "center"
+    })
+
+    // <---------------- PART 4 ------------>
+    // Add padding to the item containers, Round the borders of item containers
+   
+    shirt1.style.padding = "10px";
+    shirt1.style.borderRadius = "12px";
+
+    shirt2.style.padding = "10px";
+    shirt2.style.borderRadius = "12px";
+
+    shirt3.style.padding = "10px";
+    shirt3.style.borderRadius = "12px";
+
+    pants1.style.padding = "10px";
+    pants1.style.borderRadius = "12px";
+
+    pants2.style.padding = "10px";
+    pants2.style.borderRadius = "12px";
+
+    pants3.style.padding = "10px";
+    pants3.style.borderRadius = "12px";
+
+    shoes1.style.padding = "10px";
+    shoes1.style.borderRadius = "12px";
+
+    shoes2.style.padding = "10px";
+    shoes2.style.borderRadius = "12px";
+    
+    shoes3.style.padding = "10px";
+    shoes3.style.borderRadius = "12px";
+
+</script>
+
+
+
+
+
+
+
+
+<style>
+    #shirtsItems div {
+    border: 3px solid black;
+    }
+    #pantsItems div {
+    border: 3px solid black;
+    }
+    #shoesItems div {
+    border: 3px solid black;
+    }
+</style>
+
+</html>

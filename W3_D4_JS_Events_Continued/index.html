@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <div id='header'>
+        <h1>Aspen's Adventure Gallery</h1>
+    </div>
+    <div id='content'>
+        <div id="mainDisplay">
+            <img id="mainDisplayImage" src="assets/placeholder.png"/>
+        </div>
+        <h3>Select an image to view</h3>
+        <div id='thumbnailsContainer'>
+            <div class='thumbnail'>
+                <img src="assets/Aspen1.jpg" class="thumbnailImage" id="A1I">
+                <button id="A1B"
+                    onclick='
+                        var mainDisplayImageHTML = document.getElementById("mainDisplayImage");
+                        mainDisplayImageHTML.src = "assets/Aspen1.jpg";
+                '>View</button>
+            </div>
+            <div class='thumbnail'>
+                <img src="assets/Aspen2.jpg" class="thumbnailImage" id="A2I">
+                <button id="A2B"
+                    onclick='
+                        var mainDisplayImageHTML = document.getElementById("mainDisplayImage");
+                        mainDisplayImageHTML.src = "assets/Aspen2.jpg";
+                '>View</button>
+            </div>
+            <div class='thumbnail'>
+                <img src="assets/Aspen3.jpg" class="thumbnailImage" id="A3I">
+                <button id="A3B"
+                    onclick='
+                        var mainDisplayImageHTML = document.getElementById("mainDisplayImage");
+                        mainDisplayImageHTML.src = "assets/Aspen3.jpg";
+                '>View</button>
+            </div>
+            <div class='thumbnail'>
+                <img src="assets/Aspen4.jpg" class="thumbnailImage" id="A4I">
+                <button id="A4B"
+                    onclick='
+                        var mainDisplayImageHTML = document.getElementById("mainDisplayImage");
+                        mainDisplayImageHTML.src = "assets/Aspen4.jpg";
+                '>View</button>
+            </div>
+            <div class='thumbnail'>
+                <img src="assets/Aspen5.jpg" class="thumbnailImage" id="A5I">
+                <button id="A5B"
+                    onclick='
+                        var mainDisplayImageHTML = document.getElementById("mainDisplayImage");
+                        mainDisplayImageHTML.src = "assets/Aspen5.jpg";
+                '>View</button>
+            </div>
+            <div class='thumbnail'>
+                <img src="assets/Aspen6.jpg" class="thumbnailImage" id="A6I">
+                <button id="A6B"
+                    onclick='
+                        var mainDisplayImageHTML = document.getElementById("mainDisplayImage");
+                        mainDisplayImageHTML.src = "assets/Aspen6.jpg";
+                '>View</button>
+            </div>
+            <div class='thumbnail'>
+                <img src="assets/Aspen7.jpg" class="thumbnailImage" id="A7I">
+                <button id="A7B"
+                    onclick='
+                        var mainDisplayImageHTML = document.getElementById("mainDisplayImage");
+                        mainDisplayImageHTML.src = "assets/Aspen7.jpg";
+                '>View</button>
+            </div>
+            <div class='thumbnail'>
+                <img src="assets/Aspen8.jpg" class="thumbnailImage" id="A8I">
+                <button id="A8B"
+                    onclick='
+                        var mainDisplayImageHTML = document.getElementById("mainDisplayImage");
+                        mainDisplayImageHTML.src = "assets/Aspen8.jpg";
+                '>View</button>
+            </div>
+        </div>
+    </div>
+    <script>
+
+        const Asp1But = document.getElementById("A1B")
+        const Asp2But = document.getElementById("A2B")
+        const Asp3But = document.getElementById("A3B")
+        const Asp4But = document.getElementById("A4B")
+        const Asp5But = document.getElementById("A5B")
+        const Asp6But = document.getElementById("A6B")
+        const Asp7But = document.getElementById("A7B")
+        const Asp8But = document.getElementById("A8B")
+
+        Asp1But.style.display = "none"
+        Asp2But.style.display = "none"
+        Asp3But.style.display = "none"
+        Asp4But.style.display = "none"
+        Asp5But.style.display = "none"
+        Asp6But.style.display = "none"
+        Asp7But.style.display = "none"
+        Asp8But.style.display = "none"
+
+        Asp1But.previousElementSibling.addEventListener('mouseover', function(){
+                Asp1But.style.display = 'block';
+            });
+
+        Asp1But.previousElementSibling.addEventListener('mouseout', function(){
+                Asp1But.style.display = 'none';
+        })
+
+        Asp2But.previousElementSibling.addEventListener('mouseover', function(){
+                Asp2But.style.display = 'block';
+            });
+
+        Asp2But.previousElementSibling.addEventListener('mouseout', function(){
+                Asp2But.style.display = 'none';
+        })
+
+        Asp3But.previousElementSibling.addEventListener('mouseover', function(){
+                Asp3But.style.display = 'block';
+            });
+
+        Asp3But.previousElementSibling.addEventListener('mouseout', function(){
+                Asp3But.style.display = 'none';
+        })
+
+        Asp4But.previousElementSibling.addEventListener('mouseover', function(){
+                Asp4But.style.display = 'block';
+            });
+
+        Asp4But.previousElementSibling.addEventListener('mouseout', function(){
+                Asp4But.style.display = 'none';
+        })
+
+        Asp5But.previousElementSibling.addEventListener('mouseover', function(){
+                Asp5But.style.display = 'block';
+            });
+
+        Asp5But.previousElementSibling.addEventListener('mouseout', function(){
+                Asp5But.style.display = 'none';
+        })
+
+        Asp6But.previousElementSibling.addEventListener('mouseover', function(){
+                Asp6But.style.display = 'block';
+            });
+
+        Asp6But.previousElementSibling.addEventListener('mouseout', function(){
+                Asp6But.style.display = 'none';
+        })
+
+        Asp7But.previousElementSibling.addEventListener('mouseover', function(){
+                Asp7But.style.display = 'block';
+            });
+
+        Asp7But.previousElementSibling.addEventListener('mouseout', function(){
+                Asp7But.style.display = 'none';
+        })
+
+        Asp8But.previousElementSibling.addEventListener('mouseover', function(){
+                Asp8But.style.display = 'block';
+            });
+
+        Asp8But.previousElementSibling.addEventListener('mouseout', function(){
+                Asp8But.style.display = 'none';
+        })
+    </script>
+</body>
+
+<style>
+
+    #header {
+        display: flex;
+        justify-content: center;
+    }
+    #content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    #mainDisplay{
+
+        margin-top: 3%;
+    }
+
+    #mainDisplay img {
+        width: 50vh;
+        border: 3px solid black;
+    }
+
+    #thumbnailsContainer {
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        /* margin-top: 5%; */
+    }
+    .thumbnail {
+        position: relative; /* Set position context for absolute positioning of the button */
+        margin: 5px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: gray;
+        border: 3px solid black;
+    }
+    .thumbnail img {
+        margin: 0;
+        width: 10vh;
+        object-fit: cover; /* This will make sure to cover the area without stretching the image */
+    }
+    .thumbnail button {
+        position: absolute; /* Position the button over the image */
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); /* Center the button */
+    }
+
+/*can i increase the mouseover area so that it's not so difficult to click the view button*/
+</style>
+</html>
