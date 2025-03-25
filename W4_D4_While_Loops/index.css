@@ -1,0 +1,154 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+#app {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+#header {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid green
+}
+
+#ordersSection {
+    flex: 4;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    overflow: scroll;
+    overflow-x: hidden; /* Hide horizontal scrollbar */
+    display: flex;
+    align-items: center;
+
+}
+
+#ordersSection h1 {
+    text-align: center;
+
+}
+
+#orderCreation {
+    flex: 3;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: grey;
+    border-top: 3px solid black;
+}
+
+#orderCreation h1 {
+    text-align: center;
+    
+}
+
+#foodoptions {
+    flex: 2;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: grey;
+    margin-left: 3%;
+    margin-right: 3%;
+    height: 80%;
+}
+
+.foodoption {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 20%;
+    max-width: 150px;
+    border: 3px solid black;
+    background-color: white;
+    border-radius: 10px;
+    margin: 3%;
+    padding: 2%;
+    box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.5);
+}
+
+#orders {
+    flex-wrap: wrap;
+    padding-left: 1%;
+    width: 70%;
+    height: 100%;
+    border: 3px solid black;
+    border-bottom: 0;
+}
+
+.order {
+    /* flex: 1; */
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    max-width: 5%;
+    min-width: 120px;
+    min-height: 60px;
+    border: 3px solid black;
+    background-color: white;
+    margin: 1%;
+    border-radius: 10px;
+    padding: 1%;
+    box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.5);
+}
+
+
+
+.order h2 {
+    border-bottom: 3px solid black;
+    text-align: center;
+    font-size: 2vh;
+    display: inline-block;
+    margin-top: 0;
+}
+
+.order button {
+    margin-top: 5px;
+    width: 60%;
+}
+
+.order img {
+    /* width: 30%; */
+    max-height: 80px;
+    /* margin-bottom: 8%; */
+}
+
+
+.foodoption h2 {
+    border-bottom: 3px solid black;
+    text-align: center;
+    font-size: 2vh;
+    margin-top: 0;
+}
+
+.foodoption img {
+    width: 100%;
+    margin-bottom: 8%;
+}
+
+.foodoption p {
+    text-align: center;
+    font-size: 1.5vw;
+    margin-top: 0;
+}
+
+.foodoption button {
+    width: 75%;
+    margin-bottom: 3px;
+}
+
+.foodoption input {
+    width: 30%;
+    margin-bottom: 3px;
+}

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Pancake shop</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+
+<body>
+    <div id="app">
+
+        <div id="ordersSection">
+            <h1>Orders</h1>
+            <div id="orders">
+                <!-- Inject order elements here -->
+
+                <div class="order">
+                    <img src="./assets/pancakes.png" alt="pancake">
+                </div>
+
+            </div>
+        </div>
+        <div id="orderCreation">
+            <h1>Menu</h1>
+            <div id="foodoptions">
+                <div class="foodoption">
+                    <img src="./assets/pancakes.png" alt="pancake">
+                    <h2>Pancakes</h2>
+                    <button 
+                        onclick='createOrder("./assets/pancakes.png", "pancake")
+                        
+                        //*** YOUR JAVASCRIPT CODE HERE ***
+                        //Select the orders div and save it to a variable
+                        //Create a new order element as a string and save it to a variable (lines 17 - 19 is an order element)
+                        //Inject the new order element into the orders div using innerHTML
+
+                    '>Create Order</button>
+
+                    <button
+                        onclick="createTwoOrders('./assets/pancakes.png', 'pancakes')
+                    ">Create 2 Orders</button>                            
+                     
+                    <label for="quantity"></label>
+                    <input type="number" id="ordersNeededOne" value="3"> 
+
+                    <button>Create Orders</button>
+                </div>
+                
+                <div class="foodoption">
+                    <img src="./assets/coffee.png" alt="coffee">
+                    <h2>Coffee</h2>
+                    <button
+                        onclick='createOrder("./assets/coffee.png", "coffee")
+                        
+                        //*** YOUR JAVASCRIPT CODE HERE ***
+                        //Select the orders div and save it to a variable
+                        //Create a new order element as a string and save it to a variable (lines 18 - 20 is an order element)
+                        //Inject the new order element into the orders div using innerHTML
+
+
+
+                    '>Create Order</button>
+
+                    <button
+                        onclick="createTwoOrders('./assets/coffee.png', 'coffee')
+                    ">Create 2 Orders</button>
+                    
+                    <label for="quantity"></label>
+                    <input type="number" id="ordersNeededTwo" value="3">
+
+                    <button
+                        onclick="completeOrder()                    
+                    ">Create Orders</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <script>
+
+        function createOrder(imageSrc, altText){
+            var ordersHTML = document.getElementByid("orders")
+            var newOrder = `<div class="order">
+                                <img src="${imageSrc}" alt="${altText}">
+                                <button onclick="this.parentElement.remove()">Ready</button>
+                            </div>`
+            ordersHTML.innerHTML += newOrder;
+        }
+
+        function createTwoOrders(imageSrc, altText){
+            createOrder(imageSrc, altText)
+            createOrder(imageSrc, altText)
+        }
+
+        function completePancakeOrder(){
+            var ordersHTML = document.getElementByid("orders")
+            var pancakeInputHTML = document.getElementById("ordersNeededOne")
+            var pancakeOrders = pancakeInputHTML.value
+            for(let i = 0; i < pancakeOrders; i++) {
+                let newOrder = `<div class="order">
+                                    <img src="./assets/pancakes.png" alt="pancake">
+                                    <button onclick="this.parentElement.remove()">Ready</button>
+                                </div>`;
+                ordersHTML.innerHTML += newOrder;
+        }}
+
+        function completeCoffeeOrder(){
+            var ordersHTML = document.getElementByid("orders")
+            var coffeeInputHTML = document.getElementById("ordersNeededTwo")
+            var coffeeOrders = coffeeInputHTML.value
+            for(let i = 0; i < coffeeOrders; i++) {
+                let newOrder = `<div class="order">
+                                    <img src="./assets/coffee.png" alt="coffee">
+                                    <button onclick="this.parentElement.remove()">Ready</button>
+                                </div>`;
+                ordersHTML.innerHTML += newOrder;
+        }}
+
+    </script>
+</body>
+
+</html>
